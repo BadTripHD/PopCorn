@@ -1,0 +1,585 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 50;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		F50A40AD2625741C00CE7B8A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50A40AC2625741C00CE7B8A /* AppDelegate.swift */; };
+		F50A40AF2625741C00CE7B8A /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50A40AE2625741C00CE7B8A /* ViewController.swift */; };
+		F50A40B22625741C00CE7B8A /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50A40B02625741C00CE7B8A /* Main.storyboard */; };
+		F50A40B42625741D00CE7B8A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = F50A40B32625741D00CE7B8A /* Assets.xcassets */; };
+		F50A40B72625741D00CE7B8A /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = F50A40B52625741D00CE7B8A /* LaunchScreen.storyboard */; };
+		F50A40C22625741E00CE7B8A /* PopCornTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50A40C12625741E00CE7B8A /* PopCornTests.swift */; };
+		F50A40CD2625741E00CE7B8A /* PopCornUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = F50A40CC2625741E00CE7B8A /* PopCornUITests.swift */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXContainerItemProxy section */
+		F50A40BE2625741E00CE7B8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F50A40A12625741C00CE7B8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F50A40A82625741C00CE7B8A;
+			remoteInfo = PopCorn;
+		};
+		F50A40C92625741E00CE7B8A /* PBXContainerItemProxy */ = {
+			isa = PBXContainerItemProxy;
+			containerPortal = F50A40A12625741C00CE7B8A /* Project object */;
+			proxyType = 1;
+			remoteGlobalIDString = F50A40A82625741C00CE7B8A;
+			remoteInfo = PopCorn;
+		};
+/* End PBXContainerItemProxy section */
+
+/* Begin PBXFileReference section */
+		F50A40A92625741C00CE7B8A /* PopCorn.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = PopCorn.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		F50A40AC2625741C00CE7B8A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		F50A40AE2625741C00CE7B8A /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		F50A40B12625741C00CE7B8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		F50A40B32625741D00CE7B8A /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		F50A40B62625741D00CE7B8A /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		F50A40B82625741D00CE7B8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F50A40BD2625741E00CE7B8A /* PopCornTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopCornTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F50A40C12625741E00CE7B8A /* PopCornTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCornTests.swift; sourceTree = "<group>"; };
+		F50A40C32625741E00CE7B8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		F50A40C82625741E00CE7B8A /* PopCornUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = PopCornUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		F50A40CC2625741E00CE7B8A /* PopCornUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopCornUITests.swift; sourceTree = "<group>"; };
+		F50A40CE2625741E00CE7B8A /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		F50A40A62625741C00CE7B8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F50A40BA2625741E00CE7B8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F50A40C52625741E00CE7B8A /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		F50A40A02625741C00CE7B8A = {
+			isa = PBXGroup;
+			children = (
+				F50A40AB2625741C00CE7B8A /* PopCorn */,
+				F50A40C02625741E00CE7B8A /* PopCornTests */,
+				F50A40CB2625741E00CE7B8A /* PopCornUITests */,
+				F50A40AA2625741C00CE7B8A /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		F50A40AA2625741C00CE7B8A /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				F50A40A92625741C00CE7B8A /* PopCorn.app */,
+				F50A40BD2625741E00CE7B8A /* PopCornTests.xctest */,
+				F50A40C82625741E00CE7B8A /* PopCornUITests.xctest */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		F50A40AB2625741C00CE7B8A /* PopCorn */ = {
+			isa = PBXGroup;
+			children = (
+				F50A40AC2625741C00CE7B8A /* AppDelegate.swift */,
+				F50A40AE2625741C00CE7B8A /* ViewController.swift */,
+				F50A40B02625741C00CE7B8A /* Main.storyboard */,
+				F50A40B32625741D00CE7B8A /* Assets.xcassets */,
+				F50A40B52625741D00CE7B8A /* LaunchScreen.storyboard */,
+				F50A40B82625741D00CE7B8A /* Info.plist */,
+			);
+			path = PopCorn;
+			sourceTree = "<group>";
+		};
+		F50A40C02625741E00CE7B8A /* PopCornTests */ = {
+			isa = PBXGroup;
+			children = (
+				F50A40C12625741E00CE7B8A /* PopCornTests.swift */,
+				F50A40C32625741E00CE7B8A /* Info.plist */,
+			);
+			path = PopCornTests;
+			sourceTree = "<group>";
+		};
+		F50A40CB2625741E00CE7B8A /* PopCornUITests */ = {
+			isa = PBXGroup;
+			children = (
+				F50A40CC2625741E00CE7B8A /* PopCornUITests.swift */,
+				F50A40CE2625741E00CE7B8A /* Info.plist */,
+			);
+			path = PopCornUITests;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		F50A40A82625741C00CE7B8A /* PopCorn */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F50A40D12625741E00CE7B8A /* Build configuration list for PBXNativeTarget "PopCorn" */;
+			buildPhases = (
+				F50A40A52625741C00CE7B8A /* Sources */,
+				F50A40A62625741C00CE7B8A /* Frameworks */,
+				F50A40A72625741C00CE7B8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = PopCorn;
+			productName = PopCorn;
+			productReference = F50A40A92625741C00CE7B8A /* PopCorn.app */;
+			productType = "com.apple.product-type.application";
+		};
+		F50A40BC2625741E00CE7B8A /* PopCornTests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F50A40D42625741E00CE7B8A /* Build configuration list for PBXNativeTarget "PopCornTests" */;
+			buildPhases = (
+				F50A40B92625741E00CE7B8A /* Sources */,
+				F50A40BA2625741E00CE7B8A /* Frameworks */,
+				F50A40BB2625741E00CE7B8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F50A40BF2625741E00CE7B8A /* PBXTargetDependency */,
+			);
+			name = PopCornTests;
+			productName = PopCornTests;
+			productReference = F50A40BD2625741E00CE7B8A /* PopCornTests.xctest */;
+			productType = "com.apple.product-type.bundle.unit-test";
+		};
+		F50A40C72625741E00CE7B8A /* PopCornUITests */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = F50A40D72625741E00CE7B8A /* Build configuration list for PBXNativeTarget "PopCornUITests" */;
+			buildPhases = (
+				F50A40C42625741E00CE7B8A /* Sources */,
+				F50A40C52625741E00CE7B8A /* Frameworks */,
+				F50A40C62625741E00CE7B8A /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+				F50A40CA2625741E00CE7B8A /* PBXTargetDependency */,
+			);
+			name = PopCornUITests;
+			productName = PopCornUITests;
+			productReference = F50A40C82625741E00CE7B8A /* PopCornUITests.xctest */;
+			productType = "com.apple.product-type.bundle.ui-testing";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		F50A40A12625741C00CE7B8A /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastSwiftUpdateCheck = 1000;
+				LastUpgradeCheck = 1000;
+				ORGANIZATIONNAME = "Baptiste POLLET";
+				TargetAttributes = {
+					F50A40A82625741C00CE7B8A = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					F50A40BC2625741E00CE7B8A = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = F50A40A82625741C00CE7B8A;
+					};
+					F50A40C72625741E00CE7B8A = {
+						CreatedOnToolsVersion = 10.0;
+						TestTargetID = F50A40A82625741C00CE7B8A;
+					};
+				};
+			};
+			buildConfigurationList = F50A40A42625741C00CE7B8A /* Build configuration list for PBXProject "PopCorn" */;
+			compatibilityVersion = "Xcode 9.3";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = F50A40A02625741C00CE7B8A;
+			productRefGroup = F50A40AA2625741C00CE7B8A /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				F50A40A82625741C00CE7B8A /* PopCorn */,
+				F50A40BC2625741E00CE7B8A /* PopCornTests */,
+				F50A40C72625741E00CE7B8A /* PopCornUITests */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		F50A40A72625741C00CE7B8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50A40B72625741D00CE7B8A /* LaunchScreen.storyboard in Resources */,
+				F50A40B42625741D00CE7B8A /* Assets.xcassets in Resources */,
+				F50A40B22625741C00CE7B8A /* Main.storyboard in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F50A40BB2625741E00CE7B8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F50A40C62625741E00CE7B8A /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		F50A40A52625741C00CE7B8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50A40AF2625741C00CE7B8A /* ViewController.swift in Sources */,
+				F50A40AD2625741C00CE7B8A /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F50A40B92625741E00CE7B8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50A40C22625741E00CE7B8A /* PopCornTests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		F50A40C42625741E00CE7B8A /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				F50A40CD2625741E00CE7B8A /* PopCornUITests.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXTargetDependency section */
+		F50A40BF2625741E00CE7B8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F50A40A82625741C00CE7B8A /* PopCorn */;
+			targetProxy = F50A40BE2625741E00CE7B8A /* PBXContainerItemProxy */;
+		};
+		F50A40CA2625741E00CE7B8A /* PBXTargetDependency */ = {
+			isa = PBXTargetDependency;
+			target = F50A40A82625741C00CE7B8A /* PopCorn */;
+			targetProxy = F50A40C92625741E00CE7B8A /* PBXContainerItemProxy */;
+		};
+/* End PBXTargetDependency section */
+
+/* Begin PBXVariantGroup section */
+		F50A40B02625741C00CE7B8A /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F50A40B12625741C00CE7B8A /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		F50A40B52625741D00CE7B8A /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				F50A40B62625741D00CE7B8A /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		F50A40CF2625741E00CE7B8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		F50A40D02625741E00CE7B8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++14";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SDKROOT = iphoneos;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		F50A40D22625741E00CE7B8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PopCorn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vakario.PopCorn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		F50A40D32625741E00CE7B8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PopCorn/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vakario.PopCorn;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Release;
+		};
+		F50A40D52625741E00CE7B8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PopCornTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vakario.PopCornTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PopCorn.app/PopCorn";
+			};
+			name = Debug;
+		};
+		F50A40D62625741E00CE7B8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				BUNDLE_LOADER = "$(TEST_HOST)";
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PopCornTests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vakario.PopCornTests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/PopCorn.app/PopCorn";
+			};
+			name = Release;
+		};
+		F50A40D82625741E00CE7B8A /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PopCornUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vakario.PopCornUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PopCorn;
+			};
+			name = Debug;
+		};
+		F50A40D92625741E00CE7B8A /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_EMBED_SWIFT_STANDARD_LIBRARIES = YES;
+				CODE_SIGN_STYLE = Automatic;
+				INFOPLIST_FILE = PopCornUITests/Info.plist;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+					"@loader_path/Frameworks",
+				);
+				PRODUCT_BUNDLE_IDENTIFIER = vakario.PopCornUITests;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				TEST_TARGET_NAME = PopCorn;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		F50A40A42625741C00CE7B8A /* Build configuration list for PBXProject "PopCorn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F50A40CF2625741E00CE7B8A /* Debug */,
+				F50A40D02625741E00CE7B8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F50A40D12625741E00CE7B8A /* Build configuration list for PBXNativeTarget "PopCorn" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F50A40D22625741E00CE7B8A /* Debug */,
+				F50A40D32625741E00CE7B8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F50A40D42625741E00CE7B8A /* Build configuration list for PBXNativeTarget "PopCornTests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F50A40D52625741E00CE7B8A /* Debug */,
+				F50A40D62625741E00CE7B8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		F50A40D72625741E00CE7B8A /* Build configuration list for PBXNativeTarget "PopCornUITests" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				F50A40D82625741E00CE7B8A /* Debug */,
+				F50A40D92625741E00CE7B8A /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = F50A40A12625741C00CE7B8A /* Project object */;
+}
