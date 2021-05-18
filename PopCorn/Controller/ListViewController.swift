@@ -12,6 +12,9 @@ class ListViewController: UIViewController {
 
     @IBOutlet weak var tableView: UITableView!
     
+    var movies: [Movie] = []
+    var category: Category?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -39,12 +42,12 @@ extension ListViewController: UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "MovieCell", for: indexPath) as! MovieCell
-        let movie = Movie()
+        /*let movie = Movie()
         
         if let info = movie {
             cell.setInformation(movie: info)
             cell.setImage(assetUrl: info.imageUrl)
-        }
+        }*/
         
         return cell
     }

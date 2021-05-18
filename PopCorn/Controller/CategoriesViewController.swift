@@ -14,15 +14,24 @@ class CategoriesViewController: UIViewController {
     @IBOutlet weak var collectionViewFlowLayout: UICollectionViewFlowLayout!
     
     
-    var categories: [Category] {
-        return DataManager.shared.categories
-    }
+    var categories: [Category] = []
+
+    private let categoriesRepository = CategoryRepo()
 
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
         configuration()
+        
+        categoriesRepository.getCategories() { response in
+            if let categories = response {
+                self.categories = categories.toCategory()
+                DispatchQueue.main.async {
+                    self.collectionView.reloadData()
+                }
+            }
+        }
     }
     
     func configuration() {
@@ -37,7 +46,7 @@ extension CategoriesViewController:
     UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
-        return 2
+        return 1
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

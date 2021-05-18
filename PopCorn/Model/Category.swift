@@ -8,7 +8,7 @@
 
 import Foundation
 
-struct Category {
+struct Category: Decodable{
     var id: Int
     var name: String
     
@@ -17,3 +17,21 @@ struct Category {
         self.name = name
     }
 }
+
+public struct CategoriesResponse: Decodable {
+    let categories: [Category]?
+    
+    enum CodingKeys: String, CodingKey {
+        case categories = "genres"
+    }
+    
+    func toCategory() -> [Category] {
+        guard let categories = self.categories else {
+            return []
+        }
+        return categories.compactMap { category -> Category? in
+            Category(fromId: category.id, fromName: category.name)
+        }
+    }
+}
+

@@ -18,6 +18,7 @@ class CategoryCollectionViewCell: UICollectionViewCell {
         self.layer.masksToBounds = false
         self.layer.cornerRadius = 10
     }
+    
     func setCategoryLabel(category: Category) {
         categoryLabel.text = category.name
     }

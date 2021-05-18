@@ -20,17 +20,20 @@ struct Movie {
     var imageUrl: String?
     var posterUrl: String?
     
-    init?() {
-        self.id = 1
-        self.title = "Avengers"
-        self.subtitle = "End Game"
-        self.releaseDate = "24/04/2019"
-        self.duration = 182
-        self.categories = ["Action", "Fantastique", "Aventure"]
-        self.description = "Thanos ayant anéanti la moitié de l’univers, les Avengers restants resserrent les rangs dans ce vingt-deuxième film des Studios Marvel, grande conclusion d’un des chapitres de l’Univers Cinématographique Marvel."
-        self.trailerUrl = "https://www.youtube.com/watch?v=wV-Q0o2OQjQ"
-        self.posterUrl = "endGamePoster"
-        self.imageUrl = "endGameAffiche"
+    init?(from movieResponse: MovieResponse)
+    {
+        guard let id = movieResponse.id, let title = movieResponse.title, let releaseDate = movieResponse.releaseDate else {
+            return nil
+        }
+        
+        self.id = id
+        self.title = title
+        self.releaseDate = releaseDate
+        self.description = movieResponse.overview
+        if let backdrop = movieResponse.backdropPath {
+            self.imageUrl = ApiManager.shared.IMAGE_BASE_URL + "w500" + backdrop
+        }
+
     }
     
     func toStringDuration() -> String{
@@ -54,4 +57,44 @@ struct Movie {
         return URL(string: trailer)
     }
     
+}
+
+
+struct MovieByCategoryResponse: Decodable {
+    let page, totalResults, totalPages: Int?
+    let results: [MovieResponse]?
+    
+    enum CodingKeys: String, CodingKey {
+        case page
+        case totalResults = "total_results"
+        case totalPages = "total_pages"
+        case results
+    }
+    
+    func toMovieByCategory() -> [Movie] {
+        guard let results = self.results else {
+            return []
+        }
+        return results.compactMap { movieReponse -> Movie? in
+            Movie(from: movieReponse)
+        }
+    }
+}
+
+struct MovieResponse: Decodable {
+    let id: Int?
+    let backdropPath: String?
+    let genres: [Int]?
+    let title: String?
+    let overview: String?
+    let releaseDate: String?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case backdropPath = "backdrop_path"
+        case genres = "genre_ids"
+        case title
+        case overview
+        case releaseDate = "release_date"
+    }
 }

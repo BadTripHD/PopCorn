@@ -26,14 +26,14 @@ class MovieViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        guard let movie = Movie() else {
+        /*guard let movie = Movie() else {
             return
         }
-        self.movie = movie
+        self.movie = movie*/
         
         displayImage(assetUrl: self.movie?.imageUrl, isPoster: false)
         displayImage(assetUrl: self.movie?.posterUrl)
-        displayInformation(movie: movie)
+        //displayInformation(movie: movie)
 
     }
 
