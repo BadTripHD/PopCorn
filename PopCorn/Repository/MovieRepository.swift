@@ -19,9 +19,9 @@ struct MovieRepo {
             params.append(URLQueryItem(name: "with_genres", value: "\(category)"))
         }
         
-        let moviesUrl = ApiManager.shared.createUrl(pathUrl: ApiPath.movieList)
-        if let url = moviesUrl?.url {
-            RequestManager.shared.requestData(url: url) { data in
+        let url = ApiManager.shared.createUrl(pathUrl: ApiPath.movieList, queryParams: params)
+        if let movieByCateUrl = url?.url {
+            RequestManager.shared.requestData(url: movieByCateUrl) { data in
                 completion(try? JSONDecoder().decode(MovieByCategoryResponse.self, from: data))
             }
         }

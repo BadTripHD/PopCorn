@@ -50,11 +50,18 @@ struct Movie {
         return categories.joined(separator: "/ ")
     }
     
-    func getTrailer() -> URL?{
+    func toUrlTrailer() -> URL?{
         guard let trailer = self.trailerUrl else {
             return nil
         }
         return URL(string: trailer)
+    }
+    
+    func toUrlImageUrl() -> URL? {
+        guard let imageUrl = self.imageUrl else {
+            return nil
+        }
+        return URL(string: imageUrl)
     }
     
 }

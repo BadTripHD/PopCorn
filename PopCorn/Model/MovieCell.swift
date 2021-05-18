@@ -33,9 +33,9 @@ class MovieCell: UITableViewCell {
         descriptionLabel.text = movie.description
     }
     
-    func setImage(assetUrl: String?) {
-        if let url = assetUrl {
-            movieImageView.image = UIImage(named: url)
+    func setImage(_ image: UIImage) {
+        DispatchQueue.main.async() {
+            self.movieImageView.image = image
         }
     }
 

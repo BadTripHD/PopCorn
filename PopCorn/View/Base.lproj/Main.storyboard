@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="e3B-iB-Y3Q">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="14313.18" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="qiR-V6-4jA">
     <device id="retina5_5" orientation="portrait">
         <adaptation id="fullscreen"/>
     </device>
@@ -207,6 +207,23 @@
             </objects>
             <point key="canvasLocation" x="40.579710144927539" y="91.304347826086968"/>
         </scene>
+        <!--Navigation Controller-->
+        <scene sceneID="Cgz-h1-nZ4">
+            <objects>
+                <navigationController id="qiR-V6-4jA" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" id="J5y-qF-rSI">
+                        <rect key="frame" x="0.0" y="20" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <color key="barTintColor" red="0.29176381229999998" green="0.077478207650000006" blue="0.5501200557" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="e3B-iB-Y3Q" kind="relationship" relationship="rootViewController" id="aEz-og-xui"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="D4O-P9-Tz9" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-2564" y="69"/>
+        </scene>
         <!--Categories View Controller-->
         <scene sceneID="nr7-lX-L9m">
             <objects>
@@ -216,7 +233,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="IVm-9H-8ed">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="Rgz-Av-vGz">
                                     <size key="itemSize" width="0.0" height="0.0"/>
@@ -231,7 +248,7 @@
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="8gx-0Z-n8V">
-                                                    <rect key="frame" x="80" y="81" width="42" height="21"/>
+                                                    <rect key="frame" x="479" y="489.66666666666669" width="42" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
@@ -261,14 +278,16 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="dI2-0H-T0o"/>
                     </view>
+                    <navigationItem key="navigationItem" id="X1x-Gd-HBW"/>
                     <connections>
                         <outlet property="collectionView" destination="IVm-9H-8ed" id="v0J-W2-zQE"/>
                         <outlet property="collectionViewFlowLayout" destination="Rgz-Av-vGz" id="Pw8-mi-DBS"/>
+                        <segue destination="yFv-oX-41Y" kind="show" identifier="moviesByCategory" id="Nel-mC-IgF"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Zj7-Qq-Dab" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-1691.304347826087" y="89.673913043478265"/>
+            <point key="canvasLocation" x="-1741" y="70"/>
         </scene>
         <!--List View Controller-->
         <scene sceneID="inn-6c-Ua2">
@@ -279,7 +298,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="J4w-SN-j3I">
-                                <rect key="frame" x="0.0" y="20" width="414" height="716"/>
+                                <rect key="frame" x="0.0" y="64" width="414" height="672"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <color key="separatorColor" white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
@@ -359,6 +378,7 @@
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Zf7-fN-Yxv"/>
                     </view>
+                    <navigationItem key="navigationItem" id="fR2-Ud-YPR"/>
                     <connections>
                         <outlet property="tableView" destination="J4w-SN-j3I" id="mXJ-RV-B3q"/>
                     </connections>

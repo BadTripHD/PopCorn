@@ -17,6 +17,7 @@ class CategoriesViewController: UIViewController {
     var categories: [Category] = []
 
     private let categoriesRepository = CategoryRepo()
+    private let identifier = "moviesByCategory"
 
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,13 +38,20 @@ class CategoriesViewController: UIViewController {
     func configuration() {
         collectionView.delegate = self
         collectionView.dataSource = self
-        
         collectionViewFlowLayout.scrollDirection = .vertical
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == identifier {
+            let listViewController = segue.destination as! ListViewController
+            if let category = sender as? Category {
+                listViewController.category = category
+            }
+        }
     }
 }
 
-extension CategoriesViewController:
-    UICollectionViewDataSource {
+extension CategoriesViewController: UICollectionViewDataSource {
     
     func numberOfSections(in collectionView: UICollectionView) -> Int {
         return 1
@@ -62,13 +70,13 @@ extension CategoriesViewController:
     }
 }
 
-extension CategoriesViewController:
-    UICollectionViewDelegate {
-    
+extension CategoriesViewController: UICollectionViewDelegate {
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+            self.performSegue(withIdentifier: identifier, sender: categories[indexPath.item])
+    }
 }
 
-extension CategoriesViewController:
-    UICollectionViewDelegateFlowLayout {
+extension CategoriesViewController: UICollectionViewDelegateFlowLayout {
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         let width = collectionView.frame.size.width
         return CGSize(width: (width - 20)/2, height: width/2)

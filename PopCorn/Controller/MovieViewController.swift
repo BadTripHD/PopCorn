@@ -44,7 +44,7 @@ class MovieViewController: UIViewController {
     
     //-----------------Button action------------------>
     @IBAction func playButton(_ sender: Any) {
-        if let url = movie?.getTrailer() {
+        if let url = movie?.toUrlTrailer() {
             UIApplication.shared.open(url)
         }
     }

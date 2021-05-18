@@ -25,6 +25,7 @@
 		F5625C352637E5F90080C4D9 /* Category.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5625C342637E5F90080C4D9 /* Category.swift */; };
 		F5625C392637EB610080C4D9 /* CategoriesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5625C382637EB610080C4D9 /* CategoriesViewController.swift */; };
 		F5625C3B2637F1F30080C4D9 /* CategoryCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = F5625C3A2637F1F30080C4D9 /* CategoryCollectionViewCell.swift */; };
+		F593C03A2653F39400D20939 /* ImageManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = F593C0392653F39400D20939 /* ImageManager.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -69,6 +70,7 @@
 		F5625C342637E5F90080C4D9 /* Category.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Category.swift; sourceTree = "<group>"; };
 		F5625C382637EB610080C4D9 /* CategoriesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoriesViewController.swift; sourceTree = "<group>"; };
 		F5625C3A2637F1F30080C4D9 /* CategoryCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CategoryCollectionViewCell.swift; sourceTree = "<group>"; };
+		F593C0392653F39400D20939 /* ImageManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageManager.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -155,6 +157,7 @@
 				F52423C3265399F20060DED6 /* CategoryRepository.swift */,
 				F52423C526539B910060DED6 /* RequestManager.swift */,
 				F52423C72653B1490060DED6 /* MovieRepository.swift */,
+				F593C0392653F39400D20939 /* ImageManager.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -330,6 +333,7 @@
 				F5625C2D2636C9EF0080C4D9 /* Movie.swift in Sources */,
 				F5625C332637003F0080C4D9 /* MovieCell.swift in Sources */,
 				F5625C2A2636987A0080C4D9 /* ListViewController.swift in Sources */,
+				F593C03A2653F39400D20939 /* ImageManager.swift in Sources */,
 				F5625C392637EB610080C4D9 /* CategoriesViewController.swift in Sources */,
 				F52423BF2637F9AD0060DED6 /* DataManager.swift in Sources */,
 				F52423C82653B1490060DED6 /* MovieRepository.swift in Sources */,
