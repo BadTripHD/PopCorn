@@ -26,4 +26,17 @@ struct MovieRepo {
             }
         }
     }
+    
+    
+    func getMovieById(id: Int, completion: @escaping ((MovieByIdResponse?) -> Void)) {
+        var detailsUrl = ApiManager.shared.createUrl(pathUrl: ApiPath.movie, queryParams: [
+            URLQueryItem(name: "append_to_response", value: "videos")
+            ])
+        detailsUrl?.path += String(id)
+        if let url = detailsUrl?.url {
+            RequestManager.shared.requestData(url: url) { data in
+                completion(try? JSONDecoder().decode(MovieByIdResponse.self, from: data))
+            }
+        }
+    }
 }

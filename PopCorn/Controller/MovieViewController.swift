@@ -21,20 +21,41 @@ class MovieViewController: UIViewController {
     @IBOutlet weak var poster: UIImageView!
     @IBOutlet weak var image: UIImageView!
     
-    
     var movie: Movie?
+    private let movieRepository = MovieRepo()
+    private let imageManager = ImageManager()
+
+    var movieId: Int = 0
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        /*guard let movie = Movie() else {
+        
+        print(movieId)
+        
+        movieRepository.getMovieById(id: self.movieId) { response in
+            if let movieResponse = response {
+                guard let movie = Movie(from: movieResponse) else {
+                    return
+                }
+                self.movie = movie
+                self.loadTrailerUrl(from: movieResponse.videos)
+                DispatchQueue.main.async() {
+                    self.displayInformation(movie: movie)
+                    self.displayImages(movie: self.movie)
+                }
+            }
+        }
+
+    }
+    
+    private func loadTrailerUrl(from movieVideos: MovieVideosResponse?) {
+        guard let results = movieVideos?.results else {
             return
         }
-        self.movie = movie*/
-        
-        displayImage(assetUrl: self.movie?.imageUrl, isPoster: false)
-        displayImage(assetUrl: self.movie?.posterUrl)
-        //displayInformation(movie: movie)
-
+        let urlList = results.toUrlList()
+        if !urlList.isEmpty {
+            self.movie?.trailerUrl = urlList[0]
+        }
     }
 
     override func didReceiveMemoryWarning() {
@@ -59,12 +80,23 @@ class MovieViewController: UIViewController {
         descriptionMovie.text = movie.description
     }
     
-    func displayImage(assetUrl: String?, isPoster: Bool = true){
-        if let url = assetUrl{
-            if isPoster{
-                poster.image = UIImage(named: url)
-            } else {
-                image.image = UIImage(named: url)
+    func displayImages(movie: Movie?){
+        if let url = movie?.toUrlImageUrl() {
+            imageManager.getImageInCache(url: url) { image, imageUrl in
+                DispatchQueue.main.async() {
+                    if imageUrl ==  url.absoluteString {
+                        self.image.image = image
+                    }
+                }
+            }
+        }
+        if let url = movie?.toUrlPosterUrl() {
+            imageManager.getImageInCache(url: url) { image, imageUrl in
+                DispatchQueue.main.async() {
+                    if imageUrl ==  url.absoluteString {
+                        self.poster.image = image
+                    }
+                }
             }
         }
     }

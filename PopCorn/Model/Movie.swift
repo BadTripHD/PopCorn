@@ -36,6 +36,28 @@ struct Movie {
 
     }
     
+    init?(from movieByIdResponse: MovieByIdResponse) {
+        guard let id = movieByIdResponse.id,
+            let title = movieByIdResponse.title,
+            let releaseDate = movieByIdResponse.releaseDate,
+            let poster = movieByIdResponse.posterUrl else {
+                return nil
+        }
+        self.id = id
+        self.title = title
+        self.subtitle = movieByIdResponse.subtitle
+        self.releaseDate = releaseDate
+        self.description = movieByIdResponse.description
+        if let imageUrl = movieByIdResponse.imageUrl {
+            self.imageUrl = ApiManager.shared.IMAGE_BASE_URL + "w500" + imageUrl
+        }
+        self.posterUrl = ApiManager.shared.IMAGE_BASE_URL + "w200" + poster
+        self.duration = movieByIdResponse.duration
+        self.categories = movieByIdResponse.categories?.compactMap({ genre -> String? in
+            return genre.name
+        })
+    }
+    
     func toStringDuration() -> String{
         guard let duration = self.duration else {
             return "nil"
@@ -62,6 +84,13 @@ struct Movie {
             return nil
         }
         return URL(string: imageUrl)
+    }
+    
+    func toUrlPosterUrl() -> URL? {
+        guard let posterUrl = self.posterUrl else {
+            return nil
+        }
+        return URL(string: posterUrl)
     }
     
 }
@@ -103,5 +132,61 @@ struct MovieResponse: Decodable {
         case title
         case overview
         case releaseDate = "release_date"
+    }
+}
+
+struct MovieByIdResponse: Decodable {
+    let id: Int?
+    let title: String?
+    let imageUrl: String?
+    let description: String?
+    let subtitle: String?
+    let posterUrl: String?
+    let releaseDate: String?
+    let video: Bool?
+    let duration: Int?
+    let categories: [Category]?
+    let videos: MovieVideosResponse?
+    
+    enum CodingKeys: String, CodingKey {
+        case id
+        case imageUrl = "backdrop_path"
+        case description = "overview"
+        case posterUrl = "poster_path"
+        case releaseDate = "release_date"
+        case title
+        case subtitle = "tagline"
+        case video
+        case duration = "runtime"
+        case categories = "genres"
+        case videos
+    }
+}
+
+struct MovieVideosResponse: Decodable {
+    let results: [MovieVideo]?
+}
+
+struct MovieVideo: Decodable {
+    let key: String?
+    let site: String?
+    let type: String?
+    
+    func transformToStringUrl() -> String? {
+        guard let key = key else {
+            return nil
+        }
+        if self.site == "YouTube" {
+            return "https://www.youtube.com/watch?v=\(key)"
+        }
+        return nil
+    }
+}
+
+extension Array where Element == MovieVideo {
+    func toUrlList() -> [String] {
+        return self.compactMap { (movieVideo: MovieVideo) -> String? in
+            movieVideo.transformToStringUrl()
+        }
     }
 }

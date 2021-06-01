@@ -19,6 +19,7 @@ class ListViewController: UIViewController {
     
     private let movieRepository = MovieRepo()
     private let imageManager = ImageManager()
+    private let identifier = "moviesToDetailMovie"
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -50,6 +51,15 @@ class ListViewController: UIViewController {
                 self.page += 1
             }
         })
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == identifier {
+            let movieViewController = segue.destination as! MovieViewController
+            if let id = sender as? Int {
+                movieViewController.movieId = id
+            }
+        }
     }
 }
 
@@ -106,5 +116,7 @@ extension ListViewController: UITableViewDataSource {
 }
 
 extension ListViewController: UITableViewDelegate {
-
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        self.performSegue(withIdentifier: identifier, sender: movies[indexPath.row].id)
+    }
 }
